@@ -1,0 +1,22 @@
+struct node{
+    int data;
+    node *next;
+};
+void delete_first(){
+ node *curr=head;
+if(head==NULL){
+    cout<<"It is an empty list"<<endl;
+}else{
+    head=head->next;
+    
+}
+
+}
+void display(){
+    node *curr = head;
+    while(curr!=NULL){
+        cout<<curr->data<<"-->";
+        curr=curr->next;
+    }
+   cout<<endl; 
+}

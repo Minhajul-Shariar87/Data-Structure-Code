@@ -1,0 +1,14 @@
+void deletion(int array[],int size){
+    for(int i=0;i<size;i++){
+        if(array[i]!=NULL){
+            count++;
+        }
+    }                                           
+    count--;
+    for(int i=0;i<count;i++){
+        array[i]=array[i+1];
+    }
+    for(int i=0;i<count;i++){
+      cout<<array[i]<<" ";
+    }
+}

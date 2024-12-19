@@ -1,0 +1,16 @@
+void function_position(int array[],int size, int position, int value){
+    for(int i=0;i<size;i++){
+        if(array[i]!=NULL){
+            count++;
+        }
+    }
+    for(int i=count;i>position;i--){
+        array[i]=array[i-1];
+    }
+    array[position]=value;
+    count++;
+    for(int i=0;i<count;i++){
+        cout<<array[i]<<" ";  
+    }
+    cout<<endl
+}

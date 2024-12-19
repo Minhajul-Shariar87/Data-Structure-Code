@@ -1,0 +1,30 @@
+struct node{
+    int data;
+    node *next;
+};
+void last_insertion(int new_data){
+    
+    node *curr= new node();
+    curr->data=new_data;
+    curr->next=NULL;
+
+    node *prevnode=head;
+
+
+    while(prevnode->next!=NULL){
+        prevnode=prevnode->next;
+    }
+    prevnode->next=curr;
+    
+
+
+}
+
+void display(){
+    node *curr = head;
+    while(curr!=NULL){
+        cout<<curr->data<<"-->";
+        curr=curr->next;
+    }
+   cout<<endl; 
+}

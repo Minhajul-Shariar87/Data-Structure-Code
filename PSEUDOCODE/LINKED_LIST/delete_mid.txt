@@ -1,0 +1,30 @@
+struct node{
+    int data;
+    node *next;
+};
+
+void delete_mid(int remove_data,int ref_data){
+    node *refnode=head;
+   
+    while(refnode!=NULL && refnode->data!=ref_data){
+        refnode=refnode->next;
+    }
+    
+    node *datanode=head;
+
+    while(datanode!=NULL && datanode->data!=remove_data){
+        datanode=datanode->next;
+    }
+    if(refnode!=NULL&&datanode!=NULL&&refnode->data==ref_data&&datanode->data==remove_data){
+    refnode->next=datanode->next;
+    }
+
+}
+void display(){
+    node *curr = head;
+    while(curr!=NULL){
+        cout<<curr->data<<"-->";
+        curr=curr->next;
+    }
+   cout<<endl; 
+}

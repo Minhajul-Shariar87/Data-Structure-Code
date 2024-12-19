@@ -1,0 +1,17 @@
+void function_mid(int array[],int size,int value){
+    for(int i=0;i<size;i++){
+        if(array[i]!=NULL){
+            count++;
+        }
+    }
+    mid=count/2;
+    for(int i=count;i>mid;i--){
+        array[i]=array[i-1];
+    }
+    array[mid]=value;
+    count++;
+    for(int i=0;i<count;i++){
+        cout<<array[i]<<" ";  
+    }
+    cout<<endl
+}
